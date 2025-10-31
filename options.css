@@ -92,7 +92,6 @@ legend {
 
 input[type="radio"] {
     margin-right: 12px;
-    /* Style moderne pour les boutons radio */
     accent-color: var(--accent-color);
     width: 18px;
     height: 18px;

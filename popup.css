@@ -75,7 +75,7 @@ select {
     color: var(--text-color);
     border-radius: 8px;
     font-size: 16px;
-    box-sizing: border-box; /* Important pour le padding */
+    box-sizing: border-box;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
@@ -98,11 +98,11 @@ input:focus, select:focus {
 }
 
 .conversion-wrapper .group {
-    flex: 1; /* Les deux groupes prennent la même place */
+    flex: 1;
 }
 
 #swap {
-    margin-top: auto; /* S'aligne avec les inputs */
+    margin-top: auto;
     padding: 8px;
     font-size: 18px;
     background: transparent;
@@ -127,21 +127,21 @@ input:focus, select:focus {
 /* --- Style de l'en-tête et du bouton options --- */
 .header {
     display: flex;
-    justify-content: center; /* Centre le titre */
+    justify-content: center;
     align-items: center;
-    position: relative; /* Contexte pour le positionnement absolu */
+    position: relative;
     width: 100%;
 }
 
 .header h1 {
-    margin: 0; /* Le h1 n'a plus besoin de marges par défaut */
+    margin: 0;
 }
 
 #openOptions {
     position: absolute;
-    right: 0; /* Aligne le bouton à droite */
+    right: 0;
     top: 50%;
-    transform: translateY(-50%); /* Centre verticalement */
+    transform: translateY(-50%);
     
     background: transparent;
     border: none;
@@ -157,5 +157,5 @@ input:focus, select:focus {
 
 #openOptions:hover {
     opacity: 1;
-    transform: translateY(-50%) rotate(60deg); /* Animation moderne */
+    transform: translateY(-50%) rotate(60deg);
 }

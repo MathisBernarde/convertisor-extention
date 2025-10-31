@@ -4,7 +4,6 @@
 function translateUI() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        // Utilise notre fonction personnalisée
         el.textContent = getMessage(key);
     });
 }
@@ -40,7 +39,7 @@ async function saveOptions() {
     
     // 5. Afficher un message de confirmation
     const status = document.getElementById('status');
-    status.textContent = getMessage('optionsSaved'); // Ajoutons cette clé
+    status.textContent = getMessage('optionsSaved');
     status.classList.add('visible');
     setTimeout(() => {
         status.classList.remove('visible');
@@ -63,7 +62,7 @@ async function restoreOptions() {
 
 // Initialisation de la page
 document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Charger les traductions d'abord (essentiel)
+    // 1. Charger les traductions d'abord
     await loadTranslations();
     
     // 2. Traduire l'interface

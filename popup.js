@@ -85,7 +85,6 @@ function populateUnits() {
 
     units.forEach(unit => {
         const unitName = getMessage(`unit_${unit}`);
-        // Utiliser new Option() est plus propre que de créer des éléments
         fromUnitSelect.add(new Option(unitName, unit));
         toUnitSelect.add(new Option(unitName, unit));
     });
@@ -116,7 +115,7 @@ function convert() {
         const valueInBase = value * fromFactor;
         result = valueInBase / toFactor;
     }
-    // .toFixed(3) pour un peu plus de précision (ex: cuillères)
+    // ".toFixed(3)" = un peu plus de précision (ex: cuillères)
     resultInput.value = parseFloat(result.toFixed(3));
 }
 
@@ -132,16 +131,11 @@ function swapUnits() {
 }
 
 // --- INITIALISATION ET ÉCOUTEURS D'ÉVÉNEMENTS ---
-// Tout doit être DANS le DOMContentLoaded pour s'assurer que les éléments existent
 document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Charger le thème
-    await loadPreferences();
-    // 2. Charger les traductions
-    await loadTranslations();
-    // 3. Traduire l'UI
-    translateUI();
-    // 4. Remplir les données
-    populateCategories();
+    await loadPreferences(); // 1. Charger le thème
+    await loadTranslations(); // 2. Charger les traductions
+    translateUI(); // 3. Traduire l'UI
+    populateCategories(); // 4. Remplir les données
     populateUnits();
 
     // 5. Brancher les écouteurs

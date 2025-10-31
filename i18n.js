@@ -1,5 +1,3 @@
-// Fichier : i18n.js
-
 /**
  * Charge les traductions personnalisées si une langue est forcée.
  * Sinon, se prépare à utiliser l'API par défaut.
@@ -26,7 +24,7 @@ async function loadTranslations() {
 
   } catch (error) {
     console.error("Failed to load custom translations:", error);
-    window.i18nMessages = null; // Revenir au défaut en cas d'erreur
+    window.i18nMessages = null;
   }
 }
 
