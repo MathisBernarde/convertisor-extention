@@ -35,5 +35,6 @@
   "unit_ms": { "message": "Mètre/seconde (m/s)" },
   "unit_kmh": { "message": "Kilomètre/heure (km/h)" },
   "unit_mph": { "message": "Mile/heure (mph)" },
-  "optionsButtonTitle": { "message": "Ouvrir les options" }
+  "optionsButtonTitle": { "message": "Ouvrir les options" },
+  "optionsSaved": { "message": "Options sauvegardées !" }
 }

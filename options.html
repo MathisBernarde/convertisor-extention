@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html> <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="options.css">
 </head>
@@ -23,8 +22,28 @@
                 <label for="theme-dark" data-i18n="themeDark">Sombre</label>
             </div>
         </fieldset>
+
+        <fieldset>
+            <legend data-i18n="language">Langue</legend>
+            <div class="radio-group">
+                <input type="radio" id="lang-system" name="language" value="system">
+                <label for="lang-system" data-i18n="langSystem">Basé sur le navigateur</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="lang-fr" name="language" value="fr">
+                <label for="lang-fr" data-i18n="langFR">Français</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="lang-en" name="language" value="en">
+                <label for="lang-en" data-i18n="langEN">English</label>
+            </div>
+        </fieldset>
         
-        </div>
+        <div id="status" class="status">Options sauvegardées !</div>
+
+    </div>
+    
+    <script src="i18n.js"></script>
     <script src="options.js"></script>
 </body>
 </html>

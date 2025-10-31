@@ -52,7 +52,7 @@ function translateUI() {
         const titleKey = el.getAttribute('data-i18n-title');
 
         if (key) {
-            const translation = chrome.i18n.getMessage(key);
+            const translation = getMessage(key);
             if (translation) {
                 if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                     el.placeholder = translation;
@@ -63,7 +63,7 @@ function translateUI() {
         }
         
         if (titleKey) {
-            const translation = chrome.i18n.getMessage(titleKey);
+            const translation = getMessage(titleKey);
             if (translation) {
                 el.title = translation;
             }
@@ -95,7 +95,7 @@ function populateCategories() {
         const option = document.createElement('option');
         option.value = category;
         // Traduire le nom de la catégorie
-        option.textContent = chrome.i18n.getMessage(`category_${category}`);
+        option.textContent = getMessage(`category_${category}`);
         categorySelect.appendChild(option);
     });
 }
@@ -118,7 +118,7 @@ function populateUnits() {
 
     units.forEach(unit => {
         // Traduire le nom de l'unité
-        const unitName = chrome.i18n.getMessage(`unit_${unit}`);
+        const unitName = getMessage(`unit_${unit}`);
         
         const fromOption = document.createElement('option');
         fromOption.value = unit;
@@ -196,6 +196,14 @@ function swapUnits() {
 
 // --- INITIALISATION ET ÉCOUTEURS D'ÉVÉNEMENTS ---
 document.addEventListener('DOMContentLoaded', async () => {
+    
+    // 1. Charger le thème
+    await loadPreferences();
+    // 2. Charger les traductions
+    await loadTranslations();
+    // 3. Traduire l'UI
+    translateUI();
+
     await loadPreferences();
     translateUI();
     populateCategories();
