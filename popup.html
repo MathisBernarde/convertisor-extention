@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 data-i18n="popupTitle">Convertisor</h1>
+            <button id="openOptions" data-i18n-title="optionsButtonTitle">⚙️</button>
+        </div>
+
+        <div class="group">
+            <label for="category" data-i18n="category">Type</label>
+            <select id="category"></select>
+        </div>
+
+        <div class="conversion-wrapper">
+            <div class="group">
+                <input type="number" id="inputValue" value="1">
+                <select id="fromUnit"></select>
+            </div>
+
+            <button id="swap" title="Inverser les unités">⇌</button>
+
+            <div class="group">
+                <input type="text" id="result" readonly>
+                <select id="toUnit"></select>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

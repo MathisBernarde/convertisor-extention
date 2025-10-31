@@ -1,0 +1,161 @@
+:root {
+    /* Thème Clair (défaut) */
+    --bg-color: #f4f7f6;
+    --text-color: #111;
+    --input-bg: #fff;
+    --input-border: #ccc;
+    --accent-color: #007bff;
+    --accent-hover: #0056b3;
+    --shadow-color: rgba(0,0,0,0.1);
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color-scheme: light;
+}
+
+[data-theme="dark"] {
+    /* Thème Sombre */
+    --bg-color: #1e1e1e;
+    --text-color: #f1f1f1;
+    --input-bg: #2a2a2a;
+    --input-border: #555;
+    --accent-color: #0a84ff;
+    --accent-hover: #0060df;
+    --shadow-color: rgba(0,0,0,0.4);
+
+    color-scheme: dark;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 16px;
+    width: 320px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Important pour le padding */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px var(--accent-color)40;
+}
+
+#result {
+    font-weight: bold;
+    color: var(--accent-color);
+    background-color: color-mix(in srgb, var(--input-bg) 90%, var(--accent-color) 10%);
+}
+
+.conversion-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.conversion-wrapper .group {
+    flex: 1; /* Les deux groupes prennent la même place */
+}
+
+#swap {
+    margin-top: auto; /* S'aligne avec les inputs */
+    padding: 8px;
+    font-size: 18px;
+    background: transparent;
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#swap:hover {
+    background-color: color-mix(in srgb, var(--input-bg) 80%, var(--text-color) 20%);
+    transform: rotate(180deg);
+}
+
+#swap:active {
+    transform: rotate(180deg) scale(0.9);
+}
+
+/* --- Style de l'en-tête et du bouton options --- */
+.header {
+    display: flex;
+    justify-content: center; /* Centre le titre */
+    align-items: center;
+    position: relative; /* Contexte pour le positionnement absolu */
+    width: 100%;
+}
+
+.header h1 {
+    margin: 0; /* Le h1 n'a plus besoin de marges par défaut */
+}
+
+#openOptions {
+    position: absolute;
+    right: 0; /* Aligne le bouton à droite */
+    top: 50%;
+    transform: translateY(-50%); /* Centre verticalement */
+    
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-color);
+    opacity: 0.6;
+    padding: 4px;
+    border-radius: 50%;
+    transition: opacity 0.2s, transform 0.2s ease-out;
+}
+
+#openOptions:hover {
+    opacity: 1;
+    transform: translateY(-50%) rotate(60deg); /* Animation moderne */
+}
