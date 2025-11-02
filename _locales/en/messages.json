@@ -4,7 +4,7 @@
   "popupTitle": { "message": "Convertisor" },
   "optionsTitle": { "message": "Convertisor Options" },
   "theme": { "message": "Theme" },
-  "themeSystem": { "message": "System" },
+  "themeSystem": { "message": "Based on the browser settings" },
   "themeLight": { "message": "Light" },
   "themeDark": { "message": "Dark" },
   "language": { "message": "Language" },
