@@ -37,5 +37,8 @@
   "unit_mph": { "message": "Mile/hour (mph)" },
   "optionsButtonTitle": { "message": "Open options" },
   "optionsSaved": { "message": "Options saved !" },
-  "category": { "message": "Category" }
+  "category": { "message": "Category" },
+  "supportTitle": { "message": "Support & Contact" },
+  "contactMe": { "message": "If you wish to contact me (Portfolio) 🔗" },
+  "buyMeACoffee": { "message": "Buy me a coffee ☕️" }
 }

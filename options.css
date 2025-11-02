@@ -110,3 +110,21 @@ input[type="radio"] {
 .status.visible {
     opacity: 1;
 }
+
+/* --- Style des Liens de Support --- */
+.link-group {
+    display: block;
+    padding: 12px 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.link-group:hover {
+    background-color: color-mix(in srgb, var(--bg-color) 50%, var(--card-bg) 50%);
+    text-decoration: underline;
+}
