@@ -39,6 +39,6 @@
   "optionsSaved": { "message": "Options sauvegardées !" },
   "category": { "message": "Catégorie" },
   "supportTitle": { "message": "Soutien & Contact" },
-  "contactMe": { "message": "Si vous souhaitez me contacter (Portfolio) 🔗" },
+  "contactMe": { "message": "Vous souhaitez me contacter ou vous rencontrez un bug ?" },
   "buyMeACoffee": { "message": "Offrez-moi un café ☕️" }
 }

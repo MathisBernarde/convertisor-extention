@@ -35,10 +35,9 @@
   "unit_ms": { "message": "Meter/second (m/s)" },
   "unit_kmh": { "message": "Kilometer/hour (km/h)" },
   "unit_mph": { "message": "Mile/hour (mph)" },
-  "optionsButtonTitle": { "message": "Open options" },
   "optionsSaved": { "message": "Options saved !" },
   "category": { "message": "Category" },
   "supportTitle": { "message": "Support & Contact" },
-  "contactMe": { "message": "If you wish to contact me (Portfolio) 🔗" },
+  "contactMe": { "message": "You want to contact me or report a bug?" },
   "buyMeACoffee": { "message": "Buy me a coffee ☕️" }
 }
